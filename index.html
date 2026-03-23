@@ -59,6 +59,7 @@
 
   <!-- PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>window.pdfjsLib && (pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js');</script>
   <!-- jsPDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
@@ -182,6 +183,30 @@
       </div>
       <div id="history-list" class="history-list">
         <div class="history-empty">Aún no has analizado ningún documento</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section id="como-funciona" class="how-it-works">
+    <div class="how-it-works-inner">
+      <h2>Cómo funciona</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Sube tu documento</h3>
+          <p>Pega el texto, sube un PDF o introduce la URL de una página con términos legales.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>La IA lo analiza</h3>
+          <p>Nuestro modelo identifica cada cláusula y la evalúa según la legislación de tu país.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Resultado con semáforo</h3>
+          <p>Recibes una puntuación global y cada cláusula marcada en verde, amarillo o rojo con su explicación.</p>
+        </div>
       </div>
     </div>
   </section>
