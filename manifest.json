@@ -1,0 +1,22 @@
+{
+  "name": "LeyFácil.pro",
+  "short_name": "LeyFácil",
+  "description": "Traduce documentos legales a lenguaje humano con IA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#1E3A5F",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

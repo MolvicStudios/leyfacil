@@ -1,0 +1,25 @@
+/* ===== ANALYZER AREA ===== */
+.analyzer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.analyzer-header h2 {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+}
+
+.text-counter {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* ===== INPUT MODE SECTIONS ===== */
+.input-section {
+  display: none;
+}
+
+.input-section.active {
+  display: block;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeyFácil.pro — Entiende cualquier contrato o ley en segundos</title>
+  <meta name="description" content="Traduce contratos de alquiler, trabajo, hipotecas y términos legales a lenguaje humano con IA. Semáforo de cláusulas abusivas. Gratis. Para España y LATAM.">
+  <meta name="keywords" content="entender contrato alquiler, cláusulas abusivas, traductor legal IA, contrato trabajo fácil, leer hipoteca, términos condiciones web, ley en español fácil">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leyfacil.pro/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LeyFácil — Entiende tu contrato en segundos">
+  <meta property="og:description" content="IA que traduce documentos legales a lenguaje humano. Detecta cláusulas abusivas con semáforo. Gratis.">
+  <meta property="og:url" content="https://leyfacil.pro/">
+  <meta property="og:image" content="https://leyfacil.pro/icons/og-image.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LeyFácil — Entiende tu contrato en segundos">
+  <meta name="twitter:description" content="IA que traduce documentos legales a lenguaje humano. Detecta cláusulas abusivas con semáforo. Gratis.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LeyFácil",
+    "url": "https://leyfacil.pro",
+    "description": "Traductor de documentos legales a lenguaje humano con IA. Detecta cláusulas abusivas.",
+    "applicationCategory": "LegalApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "inLanguage": "es",
+    "author": { "@type": "Organization", "name": "MolvicStudios", "url": "https://molvicstudios.pro" }
+  }
+  </script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1E3A5F">
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/analyzer.css">
+  <link rel="stylesheet" href="/css/result.css">
+  <link rel="stylesheet" href="/css/history.css">
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">
+      <svg class="navbar-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#1E3A5F"/>
+        <path d="M8 8h10v2H10v12h8v-5h-4v-2h6v9H8V8z" fill="#fff"/>
+        <circle cx="22" cy="10" r="3" fill="#16A34A"/>
+      </svg>
+      <span class="navbar-title">Ley<span>Fácil</span>.pro</span>
+    </a>
+    <div class="navbar-actions">
+      <a href="#como-funciona" class="navbar-link hide-mobile">Cómo funciona</a>
+      <button id="btn-history" class="btn-history-toggle">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Mi historial
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="app-main">
+
+    <!-- PANEL ENTRADA (izquierda) -->
+    <div class="panel panel-input">
+      <div class="analyzer-header">
+        <h2>Analiza tu documento</h2>
+      </div>
+
+      <!-- Tabs: Texto / PDF / URL -->
+      <div class="input-tabs">
+        <button class="input-tab active" data-mode="text">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          Pegar texto
+        </button>
+        <button class="input-tab" data-mode="pdf">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          Subir PDF
+        </button>
+        <button class="input-tab" data-mode="url">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          URL
+        </button>
+      </div>
+
+      <!-- Sección: Texto -->
+      <div id="input-text-section" class="input-section active">
+        <textarea id="input-textarea" class="input-textarea" placeholder="Pega aquí tu contrato, términos y condiciones, ley o cualquier texto legal..."></textarea>
+        <div id="char-counter" class="char-counter">0 / 15.000</div>
+      </div>
+
+      <!-- Sección: PDF -->
+      <div id="input-pdf-section" class="input-section">
+        <div id="file-drop-area" class="input-file-area active">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          <p>Arrastra tu PDF aquí o haz clic para seleccionarlo</p>
+          <span class="file-hint">Máximo 15.000 caracteres de texto extraído</span>
+          <span id="file-name-display" class="file-name-display" style="display:none"></span>
+        </div>
+        <input type="file" id="file-input" accept=".pdf" hidden>
+      </div>
+
+      <!-- Sección: URL -->
+      <div id="input-url-section" class="input-section">
+        <input type="url" id="input-url" class="input-url" placeholder="https://ejemplo.com/terminos-y-condiciones">
+      </div>
+
+      <!-- Selects: País + Tipo documento -->
+      <div class="input-selects">
+        <div class="select-group">
+          <label for="select-pais">País / marco legal</label>
+          <select id="select-pais"></select>
+        </div>
+        <div class="select-group">
+          <label for="select-tipo">Tipo de documento</label>
+          <select id="select-tipo"></select>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div id="error-alert" class="error-alert"></div>
+
+      <!-- Botón analizar -->
+      <button id="btn-analyze" class="btn-primary">
+        Analizar documento →
+      </button>
+    </div>
+
+    <!-- PANEL RESULTADO (derecha) -->
+    <div class="panel panel-result">
+      <!-- Placeholder inicial -->
+      <div id="result-placeholder" class="result-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <p>Pega un texto legal, sube un PDF o introduce una URL para ver el análisis con semáforo</p>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <span class="loading-text">Analizando con IA...</span>
+        <span class="loading-text" style="font-size:0.75rem;color:var(--text-tertiary)">Esto puede tardar unos segundos</span>
+      </div>
+
+      <!-- Resultado dinámico -->
+      <div id="result-panel"></div>
+    </div>
+  </main>
+
+  <!-- ===== HISTORIAL ===== -->
+  <section class="history-panel">
+    <div id="history-wrapper" class="history-wrapper">
+      <div class="history-header">
+        <h3>Mi historial</h3>
+        <button id="btn-clear-history" class="btn-clear-history">Borrar historial</button>
+      </div>
+      <div id="history-list" class="history-list">
+        <div class="history-empty">Aún no has analizado ningún documento</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="app-footer">
+    <p class="footer-disclaimer">
+      LeyFácil.pro es una herramienta de asistencia basada en IA.
+      Los análisis generados son orientativos y no constituyen asesoramiento jurídico.
+      No sustituyen la consulta con un abogado o asesor legal colegiado.
+      MolvicStudios no se responsabiliza de las decisiones tomadas basándose en estos análisis.
+    </p>
+    <p class="footer-brand">
+      Un proyecto de <a href="https://molvicstudios.pro" target="_blank" rel="noopener">MolvicStudios</a> · molvicstudios@outlook.com
+    </p>
+  </footer>
+
+  <!-- App JS (ES Modules) -->
+  <script type="module" src="/js/app.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {})
+    }
+  </script>
+</body>
+</html>

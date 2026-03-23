@@ -1,0 +1,231 @@
+/* ===== SCORE BLOCK ===== */
+.score-block {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.score-subtitle {
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* ===== SUMMARY BLOCK ===== */
+.summary-block {
+  padding: 1rem 0;
+}
+
+.result-section-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.summary-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* ===== SEMAFORO STATS ===== */
+.semaforo-stats {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+}
+
+.sem-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.sem-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ===== CLAUSULAS LIST ===== */
+.clausulas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.clausula-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.clausula-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.clausula-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.clausula-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.clausula-titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.clausula-original {
+  font-family: var(--font-legal);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.6rem;
+  /* Mostrar solo 3 líneas con expand */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clausula-original.expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+.clausula-traduccion {
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.clausula-traduccion strong {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+  opacity: 0.8;
+}
+
+.clausula-motivo {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ===== RESULT ACTIONS ===== */
+.result-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.btn-export,
+.btn-share {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-export {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-export:hover {
+  background: #162d4a;
+}
+
+.btn-share {
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+}
+
+.btn-share:hover {
+  background: var(--bg-elevated);
+}
+
+/* ===== RESULT DISCLAIMER ===== */
+.result-disclaimer {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding-top: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .semaforo-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+}
