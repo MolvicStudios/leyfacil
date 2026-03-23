@@ -2,5 +2,5 @@ name = "leyfacil-groq-proxy"
 main = "groq-proxy.js"
 compatibility_date = "2024-01-01"
 
-[env.production]
-routes = [{ pattern = "api.leyfacil.pro/*", zone_name = "leyfacil.pro" }]
+# Cuando tengas el dominio api.leyfacil.pro configurado en Cloudflare DNS, descomenta:
+# routes = [{ pattern = "api.leyfacil.pro/*", zone_name = "leyfacil.pro" }]

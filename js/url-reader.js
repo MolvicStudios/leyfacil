@@ -4,7 +4,7 @@ export async function extractTextFromURL(url) {
   // Validar URL
   try { new URL(url) } catch { throw new Error('URL no válida') }
 
-  const response = await fetch('https://api.leyfacil.pro/fetch-url', {
+  const response = await fetch('https://leyfacil-groq-proxy.josemmolera.workers.dev/fetch-url', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url })

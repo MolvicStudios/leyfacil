@@ -46,9 +46,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event
 
-  // No cachear llamadas a la API
-  if (request.url.includes('api.leyfacil.pro')) {
-    event.respondWith(fetch(request))
+  // No interceptar llamadas a la API — dejar que el navegador las maneje
+  if (request.url.includes('api.leyfacil.pro') || request.url.includes('workers.dev')) {
     return
   }
 

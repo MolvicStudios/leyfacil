@@ -1,5 +1,5 @@
 // js/groq.js — llama al Worker proxy, nunca directamente a Groq
-const WORKER_URL = 'https://api.leyfacil.pro'
+const WORKER_URL = 'https://leyfacil-groq-proxy.josemmolera.workers.dev'
 
 export async function callGroq(messages, systemPrompt) {
   const response = await fetch(WORKER_URL, {
