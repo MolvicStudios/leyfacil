@@ -187,6 +187,7 @@ async function handleAnalyze() {
     // Renderizar
     loading.classList.remove('active')
     renderResult(analysis)
+    window.molvicTrack && window.molvicTrack('analysis_completed')
 
     // Guardar en historial
     saveToHistory(analysis, currentText, tipodoc)
