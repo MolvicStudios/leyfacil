@@ -228,4 +228,12 @@
   .result-actions {
     flex-direction: column;
   }
+
+  /* Fonts legibles */
+  .clausula-original { font-size: 0.875rem; }
+  .clausula-motivo { font-size: 0.875rem; }
+  .result-disclaimer { font-size: 0.8125rem; }
+  .score-subtitle { font-size: 0.875rem; }
+  .clausula-traduccion strong { font-size: 0.8125rem; }
+  .sem-stat { font-size: 0.875rem; }
 }

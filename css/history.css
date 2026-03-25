@@ -108,4 +108,13 @@
   .history-list {
     grid-template-columns: 1fr;
   }
+
+  /* Touch targets */
+  .btn-clear-history { padding: 0.6rem 0.85rem; min-height: 44px; font-size: 0.8125rem; }
+  .history-delete { padding: 0.6rem 0.75rem; min-height: 44px; }
+
+  /* Fonts legibles */
+  .history-date { font-size: 0.8125rem; }
+  .history-summary { font-size: 0.875rem; }
+  .history-meta { font-size: 0.8125rem; }
 }
