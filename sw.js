@@ -1,5 +1,5 @@
 // Service Worker — LeyFácil.pro
-const CACHE_NAME = 'leyfacil-v2'
+const CACHE_NAME = 'leyfacil-v3'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -48,6 +48,11 @@ self.addEventListener('fetch', (event) => {
 
   // No interceptar llamadas a la API — dejar que el navegador las maneje
   if (request.url.includes('api.leyfacil.pro') || request.url.includes('workers.dev')) {
+    return
+  }
+
+  // No interceptar scripts de terceros (ads, analytics, etc.)
+  if (!request.url.startsWith(self.location.origin)) {
     return
   }
 
